@@ -46,7 +46,32 @@ int unboundedKnapsack(int n, int w, vector<int> &profit, vector<int> &weight){
 
     // space-optimised
 
-        vector<int> prev(w+1, 0), curr(w+1, 0);
+        // vector<int> prev(w+1, 0), curr(w+1, 0);
+
+        // for(int i=0; i<=w; i++){
+        //     prev[i] = i/weight[0]*profit[0] ;
+        // }
+
+        // for(int i=1; i<n; i++){
+        //     for(int j=0; j<=w; j++){
+
+        //         int nontake = prev[j];
+        //         int take = -1e9;
+
+        //         if(weight[i] <= j){
+        //             take = profit[i]+curr[j-weight[i]];
+        //         }
+
+        //         curr[j]= max(take, nontake);
+        //     }
+        //     prev=curr;
+        // }
+
+        // return prev[w];
+
+    // 1 array optimised
+
+        vector<int> prev(w+1, 0);
 
         for(int i=0; i<=w; i++){
             prev[i] = i/weight[0]*profit[0] ;
@@ -59,12 +84,12 @@ int unboundedKnapsack(int n, int w, vector<int> &profit, vector<int> &weight){
                 int take = -1e9;
 
                 if(weight[i] <= j){
-                    take = profit[i]+curr[j-weight[i]];
+                    take = profit[i]+prev[j-weight[i]];
                 }
 
-                curr[j]= max(take, nontake);
+                prev[j]= max(take, nontake);
             }
-            prev=curr;
+            // prev=curr;
         }
 
         return prev[w];
