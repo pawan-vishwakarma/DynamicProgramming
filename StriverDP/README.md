@@ -1,4 +1,4 @@
-# 🚀 Striver's Dynamic Programming Series - Complete Solutions & Notes
+# 🚀 Striver's Dynamic Programming Series - Codes and Problem Links
 
 This repository contains my complete journey through **Striver's Dynamic Programming Series**, a curated set of 56 problems designed to help understand and master the most important concepts in Dynamic Programming. Each problem is solved with detailed explanations, recursive, memoized (top-down), and tabulated (bottom-up) approaches where applicable.
 
@@ -10,7 +10,6 @@ This repository contains my complete journey through **Striver's Dynamic Program
 - ✅ Multiple Approaches (Recursion / Memoization / Tabulation)
 - ✅ Clean and Well-Commented Code
 - ✅ Organized Topic-wise (0/1 Knapsack, LIS, Partition DP, MCM, etc.)
-- ✅ Handwritten Notes and Explanations
 - ✅ GitHub markdown-supported documentation for easy readability
 
 ---
